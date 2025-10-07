@@ -3,24 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Дмитрієва Тетяна – Персональний сайт</title>
+    <title>[Твоє ім’я] – Портфоліо</title>
     <style>
-        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 0; padding: 0; background: #f9f9f9; color: #333; }
-        header { background: #0077cc; color: white; padding: 20px 0; text-align: center; }
-        header h1 { margin: 0; font-size: 2.2em; }
-        nav { text-align: center; margin: 10px 0; }
-        nav a { margin: 0 10px; color: #0077cc; text-decoration: none; font-weight: bold; }
-        section { padding: 40px 20px; max-width: 800px; margin: auto; }
-        h2 { color: #0077cc; }
-        footer { background: #333; color: white; text-align: center; padding: 20px 0; margin-top: 40px; }
-        .portfolio-item { margin-bottom: 20px; }
-        .contact a { color: #0077cc; text-decoration: none; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background: linear-gradient(90deg, #0077cc, #00aaff);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        header p {
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+        nav {
+            margin-top: 20px;
+        }
+        nav a {
+            margin: 0 15px;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        nav a:hover { color: #ffe600; }
+
+        section { padding: 60px 20px; max-width: 900px; margin: auto; }
+        h2 { color: #0077cc; margin-bottom: 20px; }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .portfolio-item {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .portfolio-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+        }
+        .portfolio-item img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #0077cc;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .btn:hover { background: #005fa3; }
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>Дмитрієва Тетяна</h1>
+    <h1>[Твоє ім’я]</h1>
+    <p>[Коротко про твою професію чи навички]</p>
     <nav>
         <a href="#about">Про мене</a>
         <a href="#portfolio">Портфоліо</a>
@@ -30,30 +98,42 @@
 
 <section id="about">
     <h2>Про мене</h2>
-    <p>Привіт! Я Тетяна, спеціаліст у сфері моди та дизайну.  
-    Тут ти можеш дізнатись більше про мої проекти та навички.</p>
+    <p>Привіт! Я [Твоє ім’я], спеціаліст у [твоя сфера діяльності].  
+    Маю досвід у [ключові навички/проекти]. Мій підхід – [твій стиль роботи].</p>
 </section>
 
 <section id="portfolio">
     <h2>Портфоліо</h2>
-    <div class="portfolio-item">
-        <h3>Проект 1</h3>
-        <p>Короткий опис проекту. Можеш додати посилання або скріншот.</p>
-    </div>
-    <div class="portfolio-item">
-        <h3>Проект 2</h3>
-        <p>Короткий опис проекту. Можеш додати посилання або скріншот.</p>
+    <div class="portfolio-grid">
+        <div class="portfolio-item">
+            <img src="https://via.placeholder.com/400x200" alt="Проект 1">
+            <h3>Проект 1</h3>
+            <p>Короткий опис проекту. Можна додати посилання на сайт або GitHub.</p>
+            <a href="#" class="btn">Детальніше</a>
+        </div>
+        <div class="portfolio-item">
+            <img src="https://via.placeholder.com/400x200" alt="Проект 2">
+            <h3>Проект 2</h3>
+            <p>Короткий опис проекту. Можна додати посилання на сайт або GitHub.</p>
+            <a href="#" class="btn">Детальніше</a>
+        </div>
+        <div class="portfolio-item">
+            <img src="https://via.placeholder.com/400x200" alt="Проект 3">
+            <h3>Проект 3</h3>
+            <p>Короткий опис проекту. Можна додати посилання на сайт або GitHub.</p>
+            <a href="#" class="btn">Детальніше</a>
+        </div>
     </div>
 </section>
 
 <section id="contact">
     <h2>Контакти</h2>
-    <p>Email: <a href="mailto:твій.email@example.com">busiaboutique@gmail.com</a></p>
-    <p>LinkedIn / GitHub / Telegram: <a href="#">Посилання</a></p>
+    <p>Email: <a href="mailto:твій.email@example.com">твій.email@example.com</a></p>
+    <p>LinkedIn: <a href="#" class="btn">Перейти</a> | GitHub: <a href="#" class="btn">Перейти</a></p>
 </section>
 
 <footer>
-    <p>© 2025 Busiaboutique. Всі права захищені.</p>
+    <p>© [Рік] [Твоє ім’я]. Всі права захищені.</p>
 </footer>
 
 </body>
